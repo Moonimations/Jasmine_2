@@ -10,10 +10,12 @@ public class keys : MonoBehaviour
     public AudioClip collect;
 
     public GameObject key;
+    public GameObject key_pickup;
 
     void Start()
     {
         key.SetActive(true);
+        key_pickup.SetActive(false);
         GetComponent<AudioSource>().playOnAwake = false;
         
     }
@@ -34,7 +36,8 @@ public class keys : MonoBehaviour
         yield return new WaitForSeconds(1);
         
         key.SetActive(false);
-        
+        key_pickup.SetActive(true);
+
     }
 
 

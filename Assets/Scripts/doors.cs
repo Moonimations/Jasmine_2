@@ -11,6 +11,7 @@ public class doors : MonoBehaviour
     public GameObject door;
     public GameObject key;
     public AudioClip shine;
+    public GameObject key_pickup;
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class doors : MonoBehaviour
             else
             {
                 GetComponent<AudioSource>().Play();
+                key_pickup.SetActive(false);
                 StartCoroutine("WaitForSec");
 
 
